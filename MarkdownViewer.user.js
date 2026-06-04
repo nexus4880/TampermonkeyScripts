@@ -2,8 +2,8 @@
 
 // ==UserScript==
 // @name         Markdown Viewer Dark Mode Friendly
-// @author       Saravanabalagi Ramachandran + ChatGPT
-// @version      0.2
+// @author       Saravanabalagi Ramachandran + ChatGPT + Gemini
+// @version      0.3
 // @description  Renders readme files in markdown with dark mode support
 // @include      file:///*.md
 // @require      http://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js
@@ -42,6 +42,23 @@ const darkModeCSS = `
     .markdown-body h5,
     .markdown-body h6 {
       color: #c9d1d9 !important;
+    }
+
+    /* Table dark mode fixes */
+    .markdown-body table th {
+      background-color: #161b22 !important;
+      border-color: #30363d !important;
+      color: #f0f6fc !important;
+    }
+    .markdown-body table td {
+      border-color: #30363d !important;
+    }
+    .markdown-body table tr {
+      background-color: #0d1117 !important;
+      border-top-color: #30363d !important;
+    }
+    .markdown-body table tr:nth-child(even) {
+      background-color: #161b22 !important;
     }
   }
 `;
